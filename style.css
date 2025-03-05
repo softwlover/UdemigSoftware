@@ -1,0 +1,163 @@
+:root {
+  --maincolor: #669cf4;
+  --background: #35424a;
+  --white: #f4f4f4;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* header start */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  flex: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--background);
+  color: #f4f4f4;
+  min-height: 70px;
+  padding-top: 30px;
+  border-bottom: var(--maincolor) 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px;
+}
+
+#branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+.highlight,
+.current a {
+  color: var(--maincolor);
+  font-weight: bold;
+}
+/* header end */
+
+#showcase {
+  background: url(img/showcase.jpg) no-repeat 0 -400px;
+  min-height: 400px;
+  text-align: center;
+  color: #fff;
+}
+
+#showcase h1 {
+  font-size: 55px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+#showcase {
+  font-size: 20px;
+}
+
+#newsletter {
+  background-color: var(--background);
+  color: var(--white);
+  padding: 15px;
+}
+
+#newsletter h1 {
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+#newsletter input {
+  height: 25px;
+  width: 250px;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.button-1 {
+  background-color: var(--maincolor);
+  color: #fff;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+}
+
+.box img{
+    width: 90px;
+}
+
+footer{
+    background-color: var(--maincolor);
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
+}
+
+.dark{
+  background-color: var(--background);
+  color: #fff;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#sidebar{
+  float: right ;
+  width: 30%;
+  margin-top: 10px;
+}
+
+#main-col{
+  float: left;
+  width: 60%;
+}
