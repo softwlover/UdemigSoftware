@@ -14,18 +14,33 @@ body {
 body {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.5; /* Satırlar arası boşluk */
   background-color: var(--white);
   display: flex;
   flex-direction: column;
 }
 
-/* header start */
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
-  flex: 1;
+  flex: 1; /* flex düzeninin esnemesini sağlıypurz */
+}
+
+/* header start */
+
+header {
+  background-color: var(--background);
+  color: #fff;
+  min-height: 70px;
+  padding-top: 30px;
+  border-bottom: var(--maincolor) 3px solid;
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 ul {
@@ -33,17 +48,10 @@ ul {
   padding: 0;
 }
 
-header {
-  background-color: var(--background);
-  color: #f4f4f4;
-  min-height: 70px;
-  padding-top: 30px;
-  border-bottom: var(--maincolor) 3px solid;
-}
-
 header a {
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 header ul {
@@ -56,13 +64,12 @@ header li {
   padding: 0 20px;
 }
 
-#branding h1 {
+header #branding h1 {
   margin: 0;
 }
 
 header nav {
   float: right;
-  margin-top: 10px;
 }
 
 .highlight,
@@ -70,7 +77,8 @@ header nav {
   color: var(--maincolor);
   font-weight: bold;
 }
-/* header end */
+
+/* showcase start */
 
 #showcase {
   background: url(img/showcase.jpg) no-repeat 0 -400px;
@@ -85,7 +93,7 @@ header nav {
   margin-bottom: 10px;
 }
 
-#showcase {
+#showcase p {
   font-size: 20px;
 }
 
@@ -107,13 +115,12 @@ header nav {
   height: 25px;
   width: 250px;
   padding: 4px;
-  border-radius: 6px;
 }
 
 .button-1 {
   background-color: var(--maincolor);
   color: #fff;
-  height: 36px;
+  height: 38px;
   border: none;
   border-radius: 5px;
   padding: 0 20px;
@@ -130,34 +137,75 @@ header nav {
   text-align: center;
 }
 
-.box img{
-    width: 90px;
+.box img {
+  width: 90px;
 }
 
-footer{
-    background-color: var(--maincolor);
-    padding: 15px;
-    color: #fff;
-    text-align: center;
-    margin-top: auto;
+/* ? services start */
+#services li {
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  list-style-type: none;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
-.dark{
+.quat div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.quat input {
+  padding: 5px;
+}
+
+/* ? footer start */
+footer {
+  background-color: var(--maincolor);
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  margin-top: auto;
+}
+
+.dark {
   background-color: var(--background);
   color: #fff;
   padding: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-align: center;
 }
 
-#sidebar{
-  float: right ;
-  width: 30%;
-  margin-top: 10px;
-}
-
-#main-col{
-  float: left;
+#main-col {
+  float: left; /* kapsayıcısı (container) içerisnde solda tarafda hizalan*/
   width: 60%;
+}
+
+#sidebar {
+  float: right; /* kapsayıcısı (container) içerisnde  sağ tarafda hizalan*/
+  width: 30%; /** geriye kalan %10 aralarındaki boşluklara verilir.*/
+}
+
+@media (max-width: 768px) {
+  #main-col,
+  #sidebar,
+  nav,
+  #branding {
+    /* her iki taraftaki floatları kaldırmam gerekli,normal html kuralları geçerli olmalı,  yoksa biri diğerinin üstüne çıkar*/
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  #header-container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+  }
 }
